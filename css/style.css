@@ -1,0 +1,364 @@
+:root{
+    --main-color:#f25454
+    
+}
+body{
+    font-family:"Poppins", sans-serif;
+}
+
+.carousel-caption{
+  right: 0;
+    
+}
+.carousel-caption h1{
+    font-size:4rem;
+    font-weight: 900;
+}
+.back-ground{
+    background-color: #00c3da;
+}
+.navbar {
+    transition: all 0.5s;
+}
+
+.navbar-nav .nav-link.active{
+color: var(--main-color)!important;
+}
+.fs-7{
+    font-size: 0.865rem;
+}
+.navbare-scrolled{
+    background-color: #00c3da;
+    box-shadow: 1px 5px 3px red;
+}
+.nav-link-1{
+    color:rgb(250, 248, 248);
+
+}
+#nav-bar .nav-border {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+#nav-bar .nav-item:hover .nav-link{
+    color: var(--main-color) !important;
+}
+#nav-bar .nav-item .nav-link{
+    transition: all .5s;
+}
+
+#header .header-style{
+    position: relative;
+}
+#header .style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    
+}
+
+#header .style img{
+    animation-name:img;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+#header .style h1{
+    font-size: 70px;
+    color: white;
+    animation: 1s alternate  move ;
+    animation-duration: 1.1s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+
+.btn-1 {
+width: 50px ;
+height: 50px;
+background-color: transparent;
+color: white;
+transition: all 1s ;
+
+}
+.btn-1:hover{
+    background-color: white;
+
+
+}
+.btn-1:hover span{
+    color: var(--main-color)!important;
+}
+.div{
+    border:1px solid white;
+}
+
+.pill{
+    position: absolute;
+    width: 27px;
+    height: 45px;
+    border-radius: 50px;
+    border: 2px solid rgb(253, 253, 253);
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pill:hover{
+    border-color: var(--main-color);
+   
+}
+.pill:hover::before{
+    background-color: var(--main-color);
+}
+
+.pill::before{
+content: "";
+position: absolute;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background-color: white;
+top: 10px;
+left: 8px;
+animation-name: pill;
+animation-duration: 1.5s;
+animation-iteration-count:infinite ;
+
+}
+@keyframes pill{
+   0%
+   {opacity: 1;
+    top: 10px;
+    
+}
+
+100% {
+    opacity: 0;
+    top: 25px;
+} 
+}
+
+@keyframes move{
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+
+
+
+.carousel{
+
+    z-index: 500;
+}
+.icon-setting{
+    z-index:90000;
+    top:20%;
+    width:40px;
+    height: 40px;
+    background-image: url(../image/setting.png);
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+/* about */
+
+#About h1 , #team h1 , #services h1 ,#clint h1 ,#contact h1{
+    font-size:70px;
+    color: #eee;
+
+}
+#About h2::before ,#team h2::before , #services h2::before, #clint h2::before ,#contact h2::before {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+height: 1.3px;
+width:50px;
+background-color: black;
+transform: translateX(-50%);
+transition: all 1s;
+margin-top: 5px;
+
+}
+#About .about-x:hover  h2::before , #team .about-x:hover  h2::before ,
+#services .about-x:hover  h2::before , #clint .about-x:hover  h2::before , #contact .about-x:hover  h2::before{
+    width: 70px;
+}
+.progress-bar{
+    background-color: var(--main-color);
+    height: 5px;
+}
+.progress{
+    height: 5px;
+    
+}
+/* team */
+#team .team-icon{
+top:110%;
+
+}
+
+#team .team-item:hover .team-icon{
+    top:0%;
+}
+#team .team-img img{
+    transition: all 0.4s;
+  
+    
+}
+
+
+#team .team-item:hover img{
+transform: scale(1.1);
+
+}
+.team-content h5{
+    transition: all 0.3s;
+    font-size:17px;
+    font-weight:600;
+    line-height: 0.5;
+
+}
+.team-content p{
+    font-size: 14px;
+    
+}
+#team .team-item:hover  h5{
+    color: var(--main-color);
+
+}
+.p-6{
+    padding:12px 30px;
+}
+/* services */
+#services .ser-icon{
+    color: var(--main-color);
+}
+#services .item h5{
+    transition: all .3s;
+}
+#services .item:hover h5{
+    color: var(--main-color);
+}
+/* clint */
+.carousel-indicators{
+    bottom:75%;
+}
+.carousel-indicators [data-bs-target]{
+    height: auto;
+    width: 100%;
+    text-indent:0px;
+   
+
+}
+/* contact */
+#contact .contact-detail .contact-content i{
+color: var(--main-color);
+font-size:40px;
+}
+
+
+.contact-detail .contact-content .content-text h5{
+    transition: all 0.3s;
+
+}
+  .contact-detail .contact-content .content-text:hover h5{
+    color: var(--main-color);
+}
+.form-control:focus ,textarea.form-control:focus{
+    border-color: var(--main-color) !important;
+    box-shadow: none !important;
+}
+::-webkit-input-placeholder{
+    font-size: 14px !important;
+    color: rgb(202, 199, 199)!important;
+}
+.btn{
+    background-color: var(--main-color);
+}
+.btn:hover{
+background-color: #f5313191;
+
+}
+.content-text p{
+    font-size: 15px;
+}
+footer{
+    background-image: url("../image/map.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+ 
+    width:100%;
+    background-color: #222;
+    position: relative;
+}
+footer .back-to-top{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width:50px;
+    height: 50px;
+    text-decoration: none;
+    background-color: #f5313173;
+    transition: all 0.5s;
+}
+footer .back-to-top:hover{
+    background-color: var(--main-color);
+}
+.text-w a{
+    transition: all 0.3s;
+    text-decoration: none;
+    color: rgb(156, 154, 154);
+    
+}
+.text-w a:hover {
+color: var(--main-color);
+}
+.tags a:hover {
+border-color: var(--main-color) !important;
+}
+.footer-copyright{
+    background-color: #1a1a1a;;
+}
+.footer-social a{
+    color:white;
+    transition: all 0.5s;
+}
+.footer-social  a:hover{
+
+    color:var(--main-color);
+}
+.copyright{
+    color:rgb(156, 154, 154);
+}
+.copyright a{
+    color:white;
+transition: all 0.5s;
+text-decoration:none;
+
+}
+.copyright a:hover{
+color: var(--main-color);
+}
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
